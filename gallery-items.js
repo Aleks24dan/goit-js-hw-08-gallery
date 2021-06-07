@@ -103,8 +103,8 @@ function onOpenImageGalleryClick(event) {
     return;
   }
 
-window.addEventListener('keydown', onKeyEscPress);
-window.addEventListener('keydown', onArrowBtnClick);
+  window.addEventListener('keydown', onKeyEscPress);
+  window.addEventListener('keydown', onArrowBtnClick);
   const imgSrc = event.target.dataset.source;
   const alt = event.target.alt;
   indexArrCdn = +event.target.dataset.number;
@@ -115,14 +115,14 @@ window.addEventListener('keydown', onArrowBtnClick);
 
 function onCloseLigthBoxClick() {
   window.removeEventListener('keydown', onKeyEscPress);
-window.removeEventListener('keydown', onArrowBtnClick);
-  ligthBox.classList.remove('is-open')
+  window.removeEventListener('keydown', onArrowBtnClick);
+  ligthBox.classList.remove('is-open');
   lightboxImage.src = '';
   lightboxImage.alt = '';
 }
-
+ 
 function onCloseLightboxOverlayClick(event) {
-  lightboxOverlay.removeEventListener('click', onCloseLightboxOverlayClick);
+ 
   if (event.currentTarget === event.target) {
     onCloseLigthBoxClick();
   }
@@ -136,7 +136,7 @@ function onKeyEscPress(event) {
 }
 
 function onArrowBtnClick(event) {
- let i = 0;
+  let i = 0;
   if (event.code === 'ArrowRight') {
     const objRigth = arrCdn[indexArrCdn += 1];
     lightboxImage.src = objRigth.original;
