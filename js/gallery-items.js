@@ -40,7 +40,7 @@ function onOpenImageGalleryClick(event) {
   }
 
   window.addEventListener('keydown', onKeyEscPress);
-  window.addEventListener('keydown', onArrowBtnClick);
+  window.addEventListener('keydown', onArrowBtnPress);
   const imgSrc = event.target.dataset.source;
   const alt = event.target.alt;
   indexlightboxImage = +event.target.dataset.number;
